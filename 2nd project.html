@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+<head>
+    <title>Webpage</title>
+    <link rel="stylesheet" href="Web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* CSS for error messages */
+        .error-message {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none;
+            /* Hide by default */
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="font-size: 30px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold; color:#020855; margin-left:118px; margin-top: 45px; margin-right: 473px;">
+        Logo here</h1>
+    <h2
+        style="font-size: 30px; font-weight: bold; margin-top: 30px; color: #020855; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-left: 118px;">
+        Welcome Back!</h2>
+    <p
+        style="font-size: 16px; margin-top: 10px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px;">
+        Login to get unlimited access and get your bride</p>
+    <h4
+        style="margin-top: 40px; font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px;">
+        Email id</h4>
+    <form id="loginForm">
+        <input type="text" id="email" name="email" class="input-text" placeholder="Enter email id"
+            style="font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px;">
+        <span style="margin-left: 118px;" id="emailError" class="error-message">Please enter a valid email
+            address.</span><br>
+        <h4
+            style="margin-top: 35px; font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px;">
+            Password</h4>
+        <input type="password" id="password" name="password" class="input-text" placeholder="Enter password"
+            style="font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px;">
+        <span style="margin-left: 118px;" id="passwordError" class="error-message">Password must be between 1 and 15
+            characters, and contain no special characters or spaces.</span><br>
+        <div class="flex-container">
+            <label class="checkbox-container">
+                <input type="checkbox" id="check"> Remember Me!
+            </label>
+            <a id="ForgotPassword" href="index.html?actionFrom=forgot-password" class="forgot-password">Forgot
+                Password?</a>
+        </div><br>
+        <div class="login-container"
+            style="background-color: #020855; color: white; width: 491px; height: 54px; font-size: 16px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: medium; margin-left: 118px; text-align: center;">
+            <button type="submit" onclick="loginFunction()">Login</button>
+        </div>
+    </form>
+    <div class="text-in-hr" style="margin-left: 118px; margin-right: 306px; margin-top: 30px;">
+        <span style="color:#020855; margin-right: 21px; margin-left: 21px;">Or Continue With</span>
+    </div>
+    <a
+        href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AS5LTAR54wqIfFr_pG_2aLxO7KR3igmqbJi0Ioks5r6Uu2V7VDfdL7oKZkEJxyUpohUT7JPgip86&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S352903946%3A1719900111235754&ddm=0">
+        <button class="auth-button google-button"><i class="fa-brands fa-google"></i>Google</button>
+    </a>
+    <a href="https://appleid.apple.com/sign-in">
+        <button class="auth-button apple-button"><i class="fa-brands fa-apple fa-lg"></i>Apple</button>
+    </a>
+    <div class="create-account">
+        <p style="margin">Don't have an account? <a href="create-account.html">Create one</a></p>
+    </div>
+    <img src="D:\Khathir\Using buttton\Group 16387.jpg" class="top-right-image" alt="Placeholder Image">
+    <script>
+        const form = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        form.addEventListener('submit', function (event) {
+            // Validate email format
+            if (!isValidEmail(emailInput.value)) {
+                emailError.style.display = 'block';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                emailError.style.display = 'none';
+            }
+            // Validate password format
+            if (!isValidPassword(passwordInput.value)) {
+                passwordError.style.display = 'block';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                passwordError.style.display = 'none';
+            }
+        });
+        function isValidEmail(email) {
+            // Regular expression for basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        function isValidPassword(password) {
+            // Regular expression for password: only alphanumeric, no spaces
+            const passwordRegex = /^[a-zA-Z0-9]*$/;
+            return password.length >= 1 && password.length <= 15 && passwordRegex.test(password);
+        }
+    </script>
+</body>
+
+</html>
