@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #101820;
+    color: #fff;
+}
+
+h1 {
+    color: #ff1e00;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff1e00;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 16px;
+}
+
+#track {
+    margin: 30px auto;
+    width: 80%;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    background: #333;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
